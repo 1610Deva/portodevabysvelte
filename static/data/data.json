@@ -1,0 +1,227 @@
+{
+  "technologies": {
+    "frontend": [
+      { 
+        "name": "React", 
+        "icon": "https://cdn.simpleicons.org/react/ffffff", 
+        "color": "#ffffff" 
+      },
+      { 
+        "name": "Svelte", 
+        "icon": "https://cdn.simpleicons.org/svelte/ffffff", 
+        "color": "#ff3e00" 
+      },
+      { 
+        "name": "Html", 
+        "icon": "https://cdn.simpleicons.org/html5/ffffff", 
+        "color": "#e34c26" 
+      },
+      { 
+        "name": "Css", 
+        "icon": "https://cdn.simpleicons.org/css/ffffff", 
+        "color": "#264de4" 
+      },
+      { 
+        "name": "JavaScript", 
+        "icon": "https://cdn.simpleicons.org/javascript/ffffff", 
+        "color": "#f7df1e" 
+      },
+      { 
+        "name": "TailwindCSS", 
+        "icon": "https://cdn.simpleicons.org/tailwindcss/ffffff", 
+        "color": "#38bdf8" 
+      },
+      { 
+        "name": "Bootstrap", 
+        "icon": "https://cdn.simpleicons.org/bootstrap/ffffff", 
+        "color": "#7952b3" 
+      },
+      { 
+        "name": "TypeScript", 
+        "icon": "https://cdn.simpleicons.org/typescript/ffffff", 
+        "color": "#3178c6" 
+      }
+    ],
+    "backend": [
+      { 
+        "name": "Laravel", 
+        "icon": "https://cdn.simpleicons.org/laravel/ffffff", 
+        "color": "#ff2d20" 
+      },
+      { 
+        "name": "PHP", 
+        "icon": "https://cdn.simpleicons.org/php/ffffff", 
+        "color": "#777bb4" 
+      },
+      { 
+        "name": "MongoDB", 
+        "icon": "https://cdn.simpleicons.org/mongodb/ffffff", 
+        "color": "#777bb4" 
+      },
+      { 
+        "name": "PostgreSQL", 
+        "icon": "https://cdn.simpleicons.org/postgresql/ffffff", 
+        "color": "#777bb4" 
+      },
+      { 
+        "name": "MySQL", 
+        "icon": "https://cdn.simpleicons.org/mysql/ffffff", 
+        "color": "#007396" 
+      }
+    ],
+    "uidesign": [
+      { 
+        "name": "Figma", 
+        "icon": "https://cdn.simpleicons.org/figma/ffffff", 
+        "color": "#f24e1e" 
+      }
+    ],
+    "tools": [
+      { 
+        "name": "Git", 
+        "icon": "https://cdn.simpleicons.org/git/ffffff", 
+        "color": "#ffffff" 
+      },
+      { 
+        "name": "Github", 
+        "icon": "https://cdn.simpleicons.org/github/ffffff", 
+        "color": "#ffffff" 
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Personal Portfolio using Sveltekit",
+      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "link": "https://devadattaporto.vercel.app/",
+      "image": "../assets/img/projects/portosv.png",
+      "tags": ["Vite", "Sveltekit", "Typescript", "TailwindCSS"],
+      "featured": true
+    },
+    {
+      "title": "Personal Portfolio using React JS",
+      "description": "Website portofolio pribadi menggunakan React dan TailwindCSS.",
+      "link": "https://devadattaporto.vercel.app/",
+      "image": "../assets/img/projects/portoreact.webp",
+      "tags": ["Vite", "React JS", "Javascript", "TailwindCSS", "AOS"]
+    },
+    {
+      "title": "Deva Voyages Tours & Travel Landing Page",
+      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "link": "https://www.devavoyages.com/",
+      "image": "../assets/img/projects/devavoyagestt.webp",
+      "tags": ["HTML5", "CSS", "Javascript", "Bootstrap", "PHP", "AOS", "SwiperJS"],
+      "featured": true
+    },
+    {
+      "title": "Deva Voyages Event Organizer Landing Page",
+      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "link": "https://www.devavoyagesevents.com/",
+      "image": "../assets/img/projects/devavoyageseo.webp",
+      "tags": ["HTML5", "CSS", "Javascript", "Bootstrap", "PHP"]
+    },
+    {
+      "title": "Flora & Co. Landing Page",
+      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "link": "https://1610deva.github.io/flora-co/",
+      "image": "../assets/img/projects/floraco.png",
+      "tags": ["HTML5", "CSS", "Javascript", "Bootstrap"],
+      "featured": true
+    },
+    {
+      "title": "MySneakers Shoes Store Website",
+      "description": "Landing page modern untuk UI Kit dengan React.",
+      "link": "https://mysneakers.arpthef.my.id",
+      "image": "../assets/img/projects/mysneakers.png",
+      "tags": ["Laravel", "PHP", "Alpine JS", "MySQL", "Midtrans", "TailwindCSS"],
+      "featured": true
+    },
+    {
+      "title": "YourFit Application Design",
+      "description": "Landing page modern untuk UI Kit dengan React.",
+      "link": "#",
+      "image": "../assets/img/projects/yourfit.webp",
+      "tags": ["Figma", "Canva"]
+    },
+    {
+      "title": "iFLearning Application Design",
+      "description": "Landing page modern untuk UI Kit dengan React.",
+      "link": "#",
+      "image": "../assets/img/projects/iflearning.jpg",
+      "tags": ["Figma", "Canva"]
+    }
+  ],
+  "experiences": [
+    {
+      "id": 1,
+      "company": "Assistant Laboratory - State University of Surabaya",
+      "position": "Software Development Laboratory Assistant",
+      "period": "Apr, 2025 — Present",
+      "description": "Assisted in the Software Development Laboratories.",
+      "type": "work",
+      "workingtype": "On Site",
+      "color": "cyan"
+    },
+    {
+      "id": 2,
+      "company": "Mbak Mas Fakultas Teknik Universitas Negeri Surabaya",
+      "position": "Event Committee",
+      "period": "Nov, 2025 ",
+      "description": "Participated as a volunteer in organizing the 'Mbak Mas Fakultas Teknik' event at Universitas Negeri Surabaya.",
+      "type": "work",
+      "workingtype": "Volunteer",
+      "color": "green"
+    },
+    {
+      "id": 3,
+      "company": "Deva Voyages Bali",
+      "position": "IT Support & Documentation Staff",
+      "period": "2021 — Present",
+      "description": "Managing website content, creating promotional materials, and providing IT support.",
+      "type": "work",
+      "workingtype": "Freelance",
+      "color": "yellow"
+    },
+    {
+      "id": 4,
+      "company": "Ag Pratama Bali",
+      "position": "Liaison Officer & IT Support",
+      "period": "2021 — 2022",
+      "description": "Coordinated between local staff and foreign clients, provided IT support, and managed documentation.",
+      "type": "work",
+      "workingtype": "Freelance",
+      "color": "purple"
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "State University of Surabaya",
+      "degree": "Bachelor of Informatics Engineering",
+      "period": "2022 — Present",
+      "description": "Studying software development, algorithms, database systems, and web technologies. Active in programming communities and competitions.",
+      "gpa": "3.89 / 4.00",
+      "color": "blue"
+    },
+    {
+      "id": 2,
+      "institution": "SMA Negeri 5 Denpasar",
+      "degree": "Senior High School - Science Major",
+      "period": "2021 — 2024",
+      "description": "Learned programming languages, basic web development, and database management. Completed projects in Landing page development.",
+      "gpa": "8.75 / 10.00",
+      "color": "red"
+    }
+  ],
+  "achievements": [
+    {
+      "id": 1,
+      "title": "3rd Place - INSYFEST UI/UX Design Competition",
+      "organization": "Universitas Buana Perjuangan Karawang",
+      "date": "November 2025",
+      "description": "Won third place in UI/UX design competition among 50+ participants from various universities.",
+      "icon": "fa-trophy",
+      "color": "yellow"
+    }
+  ]
+}
