@@ -310,9 +310,9 @@
 	<h2 class="mb-8 text-3xl font-bold text-white">🏄‍♂️ My Journey</h2>
 
 	<!-- Tab Navigation -->
-	<div class="mb-8 flex gap-4 border-b border-white/10 pb-2">
+	<div class="mb-9 flex gap-4 border-b border-white/10 mt-2">
 		<button
-			class="px-4 py-2 font-semibold transition-all"
+			class="px-4 py-4 font-semibold transition-all"
 			class:text-blue-400={activeTab === 'work'}
 			class:text-gray-400={activeTab !== 'work'}
 			class:border-b-2={activeTab === 'work'}
@@ -323,7 +323,7 @@
 			Work Experience
 		</button>
 		<button
-			class="px-4 py-2 font-semibold transition-all"
+			class="px-4 py-4 font-semibold transition-all"
 			class:text-blue-400={activeTab === 'education'}
 			class:text-gray-400={activeTab !== 'education'}
 			class:border-b-2={activeTab === 'education'}
@@ -334,7 +334,7 @@
 			Education
 		</button>
 		<button
-			class="px-4 py-2 font-semibold transition-all"
+			class="px-4 py-4 font-semibold transition-all"
 			class:text-blue-400={activeTab === 'achievements'}
 			class:text-gray-400={activeTab !== 'achievements'}
 			class:border-b-2={activeTab === 'achievements'}

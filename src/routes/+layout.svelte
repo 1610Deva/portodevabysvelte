@@ -49,7 +49,7 @@
 			<div class="flex h-20 items-center justify-between">
 				<!-- Logo -->
 				<div class="shrink-0">
-					<a href="/" class="md:text-3xl font-bold text-white md:-ml-8 text-2xl">Devadatta Giri</a>
+					<a href="/" class="md:text-3xl font-bold text-white md:-ml-8 text-2xl">PortoDeva</a>
 				</div>
 
 				<!-- Desktop Menu -->
@@ -152,7 +152,7 @@
 	</main>
 
 	<!-- Footer -->
-	<footer class="text-center">
+	<footer class="text-center pt-3 pb-4 border-t border-gray-700 text-gray-400 text-sm">
 		<span>
 			© {new Date().getFullYear()} Devadatta Giri. All rights reserved. <br>
 		</span>
