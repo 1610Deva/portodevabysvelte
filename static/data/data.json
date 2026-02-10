@@ -92,22 +92,22 @@
   "projects": [
     {
       "title": "Personal Portfolio using Sveltekit",
-      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "description": "Personal portfolio website built with Svelte and TailwindCSS.",
       "link": "https://devadattaporto.vercel.app/",
-      "image": "../assets/img/projects/portosv.png",
+      "image": "../assets/img/projects/portosv.webp",
       "tags": ["Vite", "Sveltekit", "Typescript", "TailwindCSS"],
       "featured": true
     },
     {
       "title": "Personal Portfolio using React JS",
-      "description": "Website portofolio pribadi menggunakan React dan TailwindCSS.",
+      "description": "Personal portfolio website built with React and TailwindCSS.",
       "link": "https://devadattaporto.vercel.app/",
       "image": "../assets/img/projects/portoreact.webp",
       "tags": ["Vite", "React JS", "Javascript", "TailwindCSS", "AOS"]
     },
     {
       "title": "Deva Voyages Tours & Travel Landing Page",
-      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "description": "Landing page for Deva Voyages Tours & Travel",
       "link": "https://www.devavoyages.com/",
       "image": "../assets/img/projects/devavoyagestt.webp",
       "tags": ["HTML5", "CSS", "Javascript", "Bootstrap", "PHP", "AOS", "SwiperJS"],
@@ -115,39 +115,39 @@
     },
     {
       "title": "Deva Voyages Event Organizer Landing Page",
-      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "description": "Landing page for Deva Voyages Event Organizer",
       "link": "https://www.devavoyagesevents.com/",
       "image": "../assets/img/projects/devavoyageseo.webp",
       "tags": ["HTML5", "CSS", "Javascript", "Bootstrap", "PHP"]
     },
     {
       "title": "Flora & Co. Landing Page",
-      "description": "Website portofolio pribadi menggunakan Svelte dan TailwindCSS.",
+      "description": "Landing page for Flora & Co. built with HTML, CSS, Javascript and Bootstrap.",
       "link": "https://1610deva.github.io/flora-co/",
-      "image": "../assets/img/projects/floraco.png",
+      "image": "../assets/img/projects/floraco.webp",
       "tags": ["HTML5", "CSS", "Javascript", "Bootstrap"],
       "featured": true
     },
     {
       "title": "MySneakers Shoes Store Website",
-      "description": "Landing page modern untuk UI Kit dengan React.",
+      "description": "Modern landing page for UI Kit built with Laravel and Midtrans as a payment gateway.",
       "link": "https://mysneakers.arpthef.my.id",
-      "image": "../assets/img/projects/mysneakers.png",
+      "image": "../assets/img/projects/mysneakers.webp",
       "tags": ["Laravel", "PHP", "Alpine JS", "MySQL", "Midtrans", "TailwindCSS"],
       "featured": true
     },
     {
       "title": "YourFit Application Design",
-      "description": "Landing page modern untuk UI Kit dengan React.",
+      "description": "Modern landing page for YourFit application design.",
       "link": "#",
       "image": "../assets/img/projects/yourfit.webp",
       "tags": ["Figma", "Canva"]
     },
     {
       "title": "iFLearning Application Design",
-      "description": "Landing page modern untuk UI Kit dengan React.",
+      "description": "Modern landing page for iFLearning application design.",
       "link": "#",
-      "image": "../assets/img/projects/iflearning.jpg",
+      "image": "../assets/img/projects/iflearning.webp",
       "tags": ["Figma", "Canva"]
     }
   ],

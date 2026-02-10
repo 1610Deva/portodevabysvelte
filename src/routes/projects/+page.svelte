@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
+	
 	interface Project {
 		title: string;
 		description: string;
@@ -17,7 +18,9 @@
 	let isVisible = false;
 
 	onMount(async () => {
-		isVisible = true;
+		setTimeout(() => {
+			isVisible = true;
+		}, 300);
 		const res = await fetch('/data/data.json');
 		const data = await res.json();
 		projects = data.projects;

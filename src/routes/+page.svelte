@@ -169,7 +169,7 @@
 
 	<!-- Right Side -->
 	<div class="ml-3 p-4">
-		<img src="../assets/img/test1.jpg" class="rounded-full" alt="Devadatta Giri" loading="lazy" />
+		<img src="../assets/img/test1.webp" class="rounded-full" alt="Devadatta Giri" loading="lazy" />
 	</div>
 </div>
 
@@ -370,7 +370,7 @@
 						<div
 							class="flex-1 rounded-lg border border-white/10 bg-white/5 p-6 transition-all hover:border-white/20 hover:bg-white/10"
 						>
-							<div class="mb-2 flex items-start justify-between">
+							<div class="mb-2 flex flex-col items-start justify-between md:flex-row md:items-center">
 								<div>
 									<h3 class="text-xl font-bold {colors.text}">{exp.position}</h3>
 									<p class="text-lg text-white">{exp.company}</p>
@@ -378,7 +378,7 @@
 										<span class="rounded-full bg-blue-500/70 px-6 py-1">{exp.workingtype}</span>
 									</p>
 								</div>
-								<span class="rounded-full bg-white/10 px-3 py-1 text-sm text-gray-300"
+								<span class="rounded-full bg-white/10 px-3 py-1 mt-4 text-sm text-gray-300"
 									>{exp.period}</span
 								>
 							</div>
@@ -411,7 +411,7 @@
 						<div
 							class="flex-1 rounded-lg border border-white/10 bg-white/5 p-6 transition-all hover:border-white/20 hover:bg-white/10"
 						>
-							<div class="mb-2 flex items-start justify-between">
+							<div class="mb-2 flex flex-col items-start justify-between md:flex-row md:items-center">
 								<div>
 									<h3 class="text-xl font-bold {colors.text}">{edu.degree}</h3>
 									<p class="text-lg text-white">{edu.institution}</p>
@@ -419,7 +419,7 @@
 										<p class="mt-1 text-sm text-gray-400">GPA: {edu.gpa}</p>
 									{/if}
 								</div>
-								<span class="rounded-full bg-white/10 px-3 py-1 text-sm text-gray-300"
+								<span class="rounded-full bg-white/10 px-3 py-1 mt-4 text-sm text-gray-300"
 									>{edu.period}</span
 								>
 							</div>

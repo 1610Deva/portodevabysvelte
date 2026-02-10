@@ -60,7 +60,9 @@
     $: filteredExperiences = experiences.filter((exp) => exp.type === 'work');
 
     onMount(async () => {
-        isVisible = true;
+		setTimeout(() => {
+			isVisible = true;
+		}, 300);
         try {
             const res = await fetch('/data/data.json');
             if (!res.ok) throw new Error('Gagal mengambil data');
