@@ -2,41 +2,49 @@
   "technologies": {
     "frontend": [
       { 
+        "id": "fe01",
         "name": "React", 
         "icon": "https://cdn.simpleicons.org/react/ffffff", 
         "color": "#ffffff" 
       },
       { 
+        "id": "fe02",
         "name": "Svelte", 
         "icon": "https://cdn.simpleicons.org/svelte/ffffff", 
         "color": "#ff3e00" 
       },
       { 
+        "id": "fe03",
         "name": "Html", 
         "icon": "https://cdn.simpleicons.org/html5/ffffff", 
         "color": "#e34c26" 
       },
       { 
+        "id": "fe04",
         "name": "Css", 
         "icon": "https://cdn.simpleicons.org/css/ffffff", 
         "color": "#264de4" 
       },
       { 
+        "id": "fe05",
         "name": "JavaScript", 
         "icon": "https://cdn.simpleicons.org/javascript/ffffff", 
         "color": "#f7df1e" 
       },
       { 
+        "id": "fe06",
         "name": "TailwindCSS", 
         "icon": "https://cdn.simpleicons.org/tailwindcss/ffffff", 
         "color": "#38bdf8" 
       },
       { 
+        "id": "fe07",
         "name": "Bootstrap", 
         "icon": "https://cdn.simpleicons.org/bootstrap/ffffff", 
         "color": "#7952b3" 
       },
       { 
+        "id": "fe08",
         "name": "TypeScript", 
         "icon": "https://cdn.simpleicons.org/typescript/ffffff", 
         "color": "#3178c6" 
@@ -44,26 +52,31 @@
     ],
     "backend": [
       { 
+        "id": "be01",
         "name": "Laravel", 
         "icon": "https://cdn.simpleicons.org/laravel/ffffff", 
         "color": "#ff2d20" 
       },
       { 
+        "id": "be02",
         "name": "PHP", 
         "icon": "https://cdn.simpleicons.org/php/ffffff", 
         "color": "#777bb4" 
       },
       { 
+        "id": "be03",
         "name": "MongoDB", 
         "icon": "https://cdn.simpleicons.org/mongodb/ffffff", 
         "color": "#777bb4" 
       },
       { 
+        "id": "be04",
         "name": "PostgreSQL", 
         "icon": "https://cdn.simpleicons.org/postgresql/ffffff", 
         "color": "#777bb4" 
       },
       { 
+        "id": "be05",
         "name": "MySQL", 
         "icon": "https://cdn.simpleicons.org/mysql/ffffff", 
         "color": "#007396" 
@@ -71,6 +84,7 @@
     ],
     "uidesign": [
       { 
+        "id": "ui01",
         "name": "Figma", 
         "icon": "https://cdn.simpleicons.org/figma/ffffff", 
         "color": "#f24e1e" 
@@ -78,11 +92,13 @@
     ],
     "tools": [
       { 
+        "id": "tl01",
         "name": "Git", 
         "icon": "https://cdn.simpleicons.org/git/ffffff", 
         "color": "#ffffff" 
       },
       { 
+        "id": "tl02",
         "name": "Github", 
         "icon": "https://cdn.simpleicons.org/github/ffffff", 
         "color": "#ffffff" 
@@ -91,14 +107,16 @@
   },
   "projects": [
     {
+      "id": "prjct01",
       "title": "Personal Portfolio using Sveltekit",
       "description": "Personal portfolio website built with Svelte and TailwindCSS.",
-      "link": "https://devadattaporto.vercel.app/",
+      "link": "https://portodeva.vercel.app/",
       "image": "../assets/img/projects/portosv.webp",
       "tags": ["Vite", "Sveltekit", "Typescript", "TailwindCSS"],
       "featured": true
     },
     {
+      "id": "prjct02",
       "title": "Personal Portfolio using React JS",
       "description": "Personal portfolio website built with React and TailwindCSS.",
       "link": "https://devadattaporto.vercel.app/",
@@ -106,6 +124,7 @@
       "tags": ["Vite", "React JS", "Javascript", "TailwindCSS", "AOS"]
     },
     {
+      "id": "prjct03",
       "title": "Deva Voyages Tours & Travel Landing Page",
       "description": "Landing page for Deva Voyages Tours & Travel",
       "link": "https://www.devavoyages.com/",
@@ -114,6 +133,7 @@
       "featured": true
     },
     {
+      "id": "prjct04",
       "title": "Deva Voyages Event Organizer Landing Page",
       "description": "Landing page for Deva Voyages Event Organizer",
       "link": "https://www.devavoyagesevents.com/",
@@ -121,22 +141,25 @@
       "tags": ["HTML5", "CSS", "Javascript", "Bootstrap", "PHP"]
     },
     {
+      "id": "prjct05",
       "title": "Flora & Co. Landing Page",
       "description": "Landing page for Flora & Co. built with HTML, CSS, Javascript and Bootstrap.",
       "link": "https://1610deva.github.io/flora-co/",
       "image": "../assets/img/projects/floraco.webp",
       "tags": ["HTML5", "CSS", "Javascript", "Bootstrap"],
-      "featured": true
+      "featured": false
     },
     {
+      "id": "prjct06",
       "title": "MySneakers Shoes Store Website",
       "description": "Modern landing page for UI Kit built with Laravel and Midtrans as a payment gateway.",
-      "link": "https://mysneakers.arpthef.my.id",
+      "link": "https://github.com/1610Deva/MySneakers",
       "image": "../assets/img/projects/mysneakers.webp",
       "tags": ["Laravel", "PHP", "Alpine JS", "MySQL", "Midtrans", "TailwindCSS"],
       "featured": true
     },
     {
+      "id": "prjct07",
       "title": "YourFit Application Design",
       "description": "Modern landing page for YourFit application design.",
       "link": "#",
@@ -144,50 +167,69 @@
       "tags": ["Figma", "Canva"]
     },
     {
+      "id": "prjct08",
       "title": "iFLearning Application Design",
       "description": "Modern landing page for iFLearning application design.",
       "link": "#",
       "image": "../assets/img/projects/iflearning.webp",
       "tags": ["Figma", "Canva"]
+    },
+    {
+      "id": "prjct09",
+      "title": "Vigenere Encryption & Decryption",
+      "description": "This web application can encrypt and decrypt messages using Vigenere encryption algorithm.",
+      "link": "https://1610deva.github.io/vigeneree-encryption/",
+      "image": "../assets/img/projects/vigenere-porto.webp",
+      "tags": ["HTML", "CSS", "Javascript"]
     }
   ],
   "experiences": [
     {
       "id": 1,
-      "company": "Assistant Laboratory - State University of Surabaya",
-      "position": "Software Development Laboratory Assistant",
+      "company": "Software Development Laboratory - State University of Surabaya",
+      "position": "Laboratory Assistant",
       "period": "Apr, 2025 — Present",
-      "description": "Assisted in the Software Development Laboratories.",
+      "description": "Assisted in the Software Development Laboratories. Responsible for managing modules that will published into the lab website.",
       "type": "work",
       "workingtype": "On Site",
       "color": "cyan"
     },
     {
       "id": 2,
+      "company": "Artificial Intelligence Study Program - State University of Surabaya",
+      "position": "Teaching Assistant for Computer Architecture Lecture",
+      "period": "Feb, 2026 — Present",
+      "description": "Supported the delivery of Computer Architecture lectures and practical workshops. Guided students through fundamental system concepts, provided mentorship on assignments, and ensured the smooth execution of laboratory activities and course assessments.",
+      "type": "work",
+      "workingtype": "On Site",
+      "color": "red"
+    },
+    {
+      "id": 3,
       "company": "Mbak Mas Fakultas Teknik Universitas Negeri Surabaya",
       "position": "Event Committee",
       "period": "Nov, 2025 ",
-      "description": "Participated as a volunteer in organizing the 'Mbak Mas Fakultas Teknik' event at Universitas Negeri Surabaya.",
+      "description": "Participated as a event committee member for 'Mbak Mas Fakultas Teknik (Faculty Ambassador)' event at Universitas Negeri Surabaya. Responsible for organizing the event according to the rundown that has been designed with other committee members.",
       "type": "work",
       "workingtype": "Volunteer",
       "color": "green"
     },
     {
-      "id": 3,
+      "id": 4,
       "company": "Deva Voyages Bali",
-      "position": "IT Support & Documentation Staff",
+      "position": "IT Support & Web Developer",
       "period": "2021 — Present",
-      "description": "Managing website content, creating promotional materials, and providing IT support.",
+      "description": "Developed a landing page for Deva Voyages Bali. Responsible for managing website content, creating promotional materials for social media, and providing IT support for the company's needs.",
       "type": "work",
       "workingtype": "Freelance",
       "color": "yellow"
     },
     {
-      "id": 4,
+      "id": 5,
       "company": "Ag Pratama Bali",
       "position": "Liaison Officer & IT Support",
       "period": "2021 — 2022",
-      "description": "Coordinated between local staff and foreign clients, provided IT support, and managed documentation.",
+      "description": "Acted as a strategic liaison between clients and the internal team to design and customize bespoke event and tour programs. Managed the company’s digital presence by overseeing social media platforms and producing comprehensive post-event recaps and documentation to ensure high-quality brand storytelling.",
       "type": "work",
       "workingtype": "Freelance",
       "color": "purple"
@@ -211,6 +253,48 @@
       "description": "Learned programming languages, basic web development, and database management. Completed projects in Landing page development.",
       "gpa": "92.30 / 100",
       "color": "red"
+    }
+  ],
+  "organization": [
+    {
+      "id": 1,
+      "position": "Member of Group",
+      "organization-name": "Google Developer Group on Campus - State University of Surabaya",
+      "period": "2024 — Present",
+      "description": "Affiliated with a global movement in higher education, GDG On Campus Universitas Negeri Surabaya serves as a platform for students to acquire and exchange technical skills. The organization emphasizes the development of proficiency in Google-centric technologies and collaborative learning.",
+      "color": "red"
+    },
+    {
+      "id": 2,
+      "position": "Member of Group",
+      "organization-name": "Novo Club by Paragon",
+      "period": "2026 — Present",
+      "description": "A community for young Indonesians who love to learn, create, and explore. Joining Novo Club opens the door to a world of exclusive content, workshops, competitions, and connections that help me grow in passions and achieve my goals.",
+      "color": "blue"
+    },
+    {
+      "id": 3,
+      "position": "School Journalist - Vice President",
+      "organization-name": "PERS KRIAS School Journalist - SMA NEGERI 5 DENPASAR",
+      "period": "2023 — 2024",
+      "description": "Led a team of student journalists as Vice President, coordinating editorial and event documentation for school-wide projects. Documented 10+ school events through photography and written coverage, producing content distributed across school platforms.",
+      "color": "yellow"
+    },
+    {
+      "id": 4,
+      "position": "Head of Public Relations",
+      "organization-name": "SMANELA English Club - SMA NEGERI 5 DENPASAR",
+      "period": "2023 — 2024",
+      "description": "Responsible for maintaining relationships with other organizations, distributing information, and promoting the organization to the public. Also, managing the organization's social media.",
+      "color": "green"
+    },
+    {
+      "id": 5,
+      "position": "Head of Videography Division",
+      "organization-name": "SPENSIX Multimedia - SMP NEGERI 6 DENPASAR",
+      "period": "2022 — 2023",
+      "description": "Responsible for planning, organizing, and executing videography projects for the organization. This includes creating event videos, promotional content, and other multimedia materials. Winning 2nd Place Video blog competition and Most Favorite Short Movie",
+      "color": "purple"
     }
   ],
   "achievements": [

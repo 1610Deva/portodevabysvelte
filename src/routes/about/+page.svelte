@@ -97,7 +97,7 @@
 
 <!-- HEADER SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -115,7 +115,7 @@
 
 <!-- INTRODUCTION SECTION -->
 <div
-	class="mt-3 grid grid-cols-1 gap-6 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out md:grid-cols-2"
+	class="mt-3 grid grid-cols-1 gap-6 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:grid-cols-2"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -173,7 +173,7 @@
 
 <!-- WHAT I DO SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -229,7 +229,7 @@
 
 <!-- TECH STACK SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -359,7 +359,7 @@
 
 <!-- TIMELINE SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -369,7 +369,7 @@
 	</h2>
 
 	<!-- Tab Navigation -->
-	<div class="mb-8 flex justify-center gap-4">
+	<div class="mb-8 flex flex-wrap justify-center gap-4">
 		<button
 			class="rounded-lg px-6 py-3 font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'work'}
@@ -508,7 +508,7 @@
 
 <!-- CONTACT CTA -->
 <div
-	class="mt-3 rounded-md bg-linear-to-r from-blue-600/20 to-purple-600/20 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-950/60 to-purple-950/60 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >

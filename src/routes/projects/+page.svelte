@@ -1,6 +1,5 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-
 	
 	interface Project {
 		title: string;
@@ -20,7 +19,7 @@
 	onMount(async () => {
 		setTimeout(() => {
 			isVisible = true;
-		}, 300);
+		}, 150);
 		const res = await fetch('/data/data.json');
 		const data = await res.json();
 		projects = data.projects;
@@ -49,7 +48,7 @@
 
 <!-- HEADER SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -67,7 +66,7 @@
 
 <!-- FILTER SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-6 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-6 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -96,7 +95,7 @@
 
 <!-- PROJECTS GRID -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -139,12 +138,13 @@
 						<p class="mb-4 text-sm text-gray-300">{project.description}</p>
 						<div class="mb-4 flex flex-wrap gap-2">
 							{#each project.tags as tag}
-								<span
+								<button
+									type="button"
 									class="cursor-pointer rounded bg-white/20 px-2 py-1 text-xs text-white transition hover:bg-blue-600"
 									on:click={() => filterProjects(tag)}
 								>
 									{tag}
-								</span>
+								</button>
 							{/each}
 						</div>
 						<a
@@ -164,7 +164,7 @@
 
 <!-- BACK TO HOME -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-6 text-center shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-6 text-center shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >

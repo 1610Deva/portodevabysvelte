@@ -27,7 +27,7 @@
 
 <!-- Header Section -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -40,7 +40,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 <!-- Contact Information Section -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -52,7 +52,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 			class="flex gap-4 rounded-lg border border-white/10 bg-white/5 p-6 transition-all hover:border-blue-400/50 hover:bg-white/10"
 		>
 			<div
-				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-blue-900/70 backdrop-blur-sm"
+				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-blue-900"
 			>
 				<i class="fa-regular fa-envelope text-lg text-blue-400"></i>
 			</div>
@@ -72,7 +72,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 			class="flex gap-4 rounded-lg border border-white/10 bg-white/5 p-6 transition-all hover:border-pink-400/50 hover:bg-white/10"
 		>
 			<div
-				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-pink-400/30 bg-pink-900/70 backdrop-blur-sm"
+				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-pink-400/30 bg-pink-900"
 			>
 				<i class="fa-solid fa-location-dot text-lg text-pink-400"></i>
 			</div>
@@ -130,7 +130,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 			class="flex gap-4 rounded-lg border border-white/10 bg-white/5 p-6 transition-all hover:border-yellow-400/50 hover:bg-white/10"
 		>
 			<div
-				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-yellow-400/30 bg-yellow-900/70 backdrop-blur-sm"
+				class="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-yellow-400/30 bg-yellow-900"
 			>
 				<i class="fa-regular fa-clock text-lg text-yellow-400"></i>
 			</div>
@@ -144,7 +144,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 <!-- BACK TO HOME -->
 <div
-    class="mt-3 rounded-md bg-white/5 p-6 text-center shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+    class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-6 text-center shadow-lg transition-opacity duration-1000 ease-in-out"
     class:opacity-0={!isVisible}
     class:opacity-100={isVisible}
 >           

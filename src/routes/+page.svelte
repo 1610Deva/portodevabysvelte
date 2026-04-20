@@ -1,35 +1,50 @@
 <script lang="ts">
-	import { onDestroy, onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
 	let isVisible = false;
 
-	// Speciality Animation
-	const specialities = ['Junior Frontend Developer 🌐', 'UI/UX Designer ✒️', 'Web Designer 🧩'];
+	const specialities = ['Frontend Developer 🌐', 'UI/UX Designer ✒️', 'Web Designer 🧩'];
 
-	let specialityIndex = 0;
-	let displayedSpeciality = '';
+	const greetings = [
+		'Hello',
+		'こんにちは',
+		'Hola',
+		'你好',
+		'Xin chào',
+		'안녕하세요',
+		'Привет',
+		'Bonjour',
+		'Halo',
+		'Ciao',
+		' السلام عليك',
+		'สวัสดี'
+	];
+
+	let greetingsIndex = 0;
+	let displayedGreetings = '';
 	let typingTimeout: ReturnType<typeof setTimeout> | undefined;
 
-	function typeSpeciality(text: string, i = 0) {
+	function typeGreetings(text: string, i = 0) {
 		if (i <= text.length) {
-			displayedSpeciality = text.slice(0, i);
-			typingTimeout = setTimeout(() => typeSpeciality(text, i + 1), 65);
+			displayedGreetings = text.slice(0, i);
+			typingTimeout = setTimeout(() => typeGreetings(text, i + 1), 100);
 		} else {
-			typingTimeout = setTimeout(() => deleteSpeciality(text), 1200);
+			typingTimeout = setTimeout(() => deleteGreetings(text), 1200);
 		}
 	}
 
-	function deleteSpeciality(text: string, i = text.length) {
+	function deleteGreetings(text: string, i = text.length) {
 		if (i >= 0) {
-			displayedSpeciality = text.slice(0, i);
-			typingTimeout = setTimeout(() => deleteSpeciality(text, i - 1), 40);
+			displayedGreetings = text.slice(0, i);
+			typingTimeout = setTimeout(() => deleteGreetings(text, i - 1), 40);
 		} else {
-			specialityIndex = (specialityIndex + 1) % specialities.length;
-			typeSpeciality(specialities[specialityIndex]);
+			greetingsIndex = (greetingsIndex + 1) % greetings.length;
+			typeGreetings(greetings[greetingsIndex]);
 		}
 	}
 
 	interface Technology {
+		id: string;
 		name: string;
 		icon: string;
 		color: string;
@@ -43,6 +58,7 @@
 	}
 
 	interface Project {
+		id: string;
 		title: string;
 		description: string;
 		link: string;
@@ -72,6 +88,15 @@
 		color: string;
 	}
 
+	interface Organization {
+		id: number;
+		position: string;
+		'organization-name': string;
+		period: string;
+		description: string;
+		color: string;
+	}
+
 	interface Achievement {
 		id: number;
 		title: string;
@@ -91,29 +116,28 @@
 	let projects: Project[] = [];
 	let experiences: Experience[] = [];
 	let education: Education[] = [];
+	let organizations: Organization[] = [];
 	let achievements: Achievement[] = [];
 
 	// section Timeline Tab state
-	let activeTab: 'work' | 'education' | 'achievements' = 'work';
+	let activeTab: 'work' | 'education' | 'achievements' | 'organization' = 'work';
 
 	$: selectedProjects = projects.filter((p) => p.featured);
 	$: filteredExperiences = experiences.filter((exp) => exp.type === 'work');
-
 	onMount(async () => {
-		isVisible = true;
-		typeSpeciality(specialities[specialityIndex]);
+		setTimeout(() => {
+			isVisible = true;
+		}, 100);
 
+		typeGreetings(greetings[greetingsIndex]);
 		const res = await fetch('/data/data.json');
 		const data = await res.json();
 		technologies = data.technologies;
 		projects = data.projects;
 		experiences = data.experiences || [];
 		education = data.education || [];
+		organizations = data.organization || [];
 		achievements = data.achievements || [];
-	});
-
-	onDestroy(() => {
-		if (typingTimeout) clearTimeout(typingTimeout);
 	});
 
 	function getColorClasses(color: string) {
@@ -122,7 +146,10 @@
 			pink: { bg: 'bg-pink-500/10', border: 'border-pink-500/30', text: 'text-pink-400' },
 			blue: { bg: 'bg-blue-500/10', border: 'border-blue-500/30', text: 'text-blue-400' },
 			yellow: { bg: 'bg-yellow-500/10', border: 'border-yellow-500/30', text: 'text-yellow-400' },
-			purple: { bg: 'bg-purple-500/10', border: 'border-purple-500/30', text: 'text-purple-400' }
+			purple: { bg: 'bg-purple-500/10', border: 'border-purple-500/30', text: 'text-purple-400' },
+			red: { bg: 'bg-red-500/10', border: 'border-red-500/30', text: 'text-red-400' },
+			orange: { bg: 'bg-orange-500/10', border: 'border-orange-500/30', text: 'text-orange-400' },
+			green: { bg: 'bg-green-500/10', border: 'border-green-500/30', text: 'text-green-400' }
 		};
 		return colorMap[color] || colorMap.cyan;
 	}
@@ -133,30 +160,39 @@
 </svelte:head>
 
 <div
-	class="mt-3 grid grid-cols-1 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out md:grid-cols-2"
+	class="md:mx-5 mt-3 grid grid-cols-1 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-500 ease-in-out md:grid-cols-2"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
 	<!-- Left Side -->
-	<div class="my-auto p-4">
-		<h1 class="mb-3 text-4xl font-bold text-white">Hi, I'm Devadatta Giri👋</h1>
-		<h3 class="text-md my-5 font-semibold text-blue-800 md:text-2xl">
-			<span class="rounded-xs bg-white px-4 py-2 md:px-8"
-				>I'm a {displayedSpeciality} <span class="animate-pulse">|</span></span
-			>
-		</h3>
-		<h5 class="text-md mb-4"><i class="fa-solid fa-location-dot mr-2"></i> Surabaya, Indonesia</h5>
+	<div class="my-auto md:p-4 order-2 md:order-1">
+
+		<div class="mb-6">  
+			<h1 class="my-4 text-4xl font-bold text-gray-300 md:text-5xl">{displayedGreetings}👋</h1>
+			<h1 class="my-4 text-6xl font-black text-white md:text-6xl lg:text-7xl">I'm <span class="text-cyan-500 sm:border-b-0 lg:border-b-8 border-blue-400">Devadatta Giri</span></h1>
+			<h5 class="mt-10 text-lg text-gray-400 font-medium">– SURABAYA,ID </h5>
+		</div>
+
+		<!-- Speciality Badges -->
+		<div class="lex-wrap gap-2 hidden md:flex">
+			{#each specialities as s}
+				<span class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white hover:bg-white hover:text-gray-700 hover:transition duration-300 ease-in-out cursor-pointer">
+					{s}
+				</span>
+			{/each}
+		</div>
+
 		<p class="my-7 text-lg text-gray-300">
 			I am interested in programming and design, especially website development, application design,
 			and digital marketing. I have been interested in these fields for more than three years.
 		</p>
-		<div class="flex">
+		<div class="flex gap-3">
 			<a
-				href="/assets/cv/CV-Devadatta-Giri.pdf"
+				href='/assets/cv/CV-Devadatta-Giri.pdf'
 				download="CV-Devadatta-Giri.pdf"
 				aria-label="Download CV"
 				target="_blank"
-				class="mr-4 rounded bg-sky-900 px-4 py-2 text-white transition hover:bg-blue-800"
+				class="rounded bg-sky-900 px-4 py-2 text-white transition hover:bg-blue-800"
 				><i class="fa-solid fa-download mr-3" style="color: #ffffff;"></i>Download CV</a
 			>
 			<a
@@ -168,14 +204,14 @@
 	</div>
 
 	<!-- Right Side -->
-	<div class="ml-3 p-4">
-		<img src="../assets/img/test1.webp" class="rounded-full" alt="Devadatta Giri" loading="lazy" />
+	<div class="p-4 order-2 md:order-2 flex justify-center md:ml-3 ">
+		<img src="../assets/img/test1.webp" class="rounded-full hidden md:flex md:w-[450px] md:h-[450px] lg:w-[95%] lg:h-[95%]" alt="Devadatta Giri" loading="lazy" />
 	</div>
 </div>
 
 <!-- TECH STACK -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="md:mx-5 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -192,7 +228,7 @@
 				Frontend
 			</h3>
 			<div class="flex flex-wrap gap-2">
-				{#each technologies.frontend as tech}
+				{#each technologies.frontend as tech, i (tech.id||i)}
 					<div
 						class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm shadow transition hover:bg-white/20"
 						style="color: {tech.color}"
@@ -201,7 +237,7 @@
 							<img src={tech.icon.replace('..', '')} alt={tech.name} class="h-4 w-4" />
 						{:else if tech.icon.startsWith('<svg')}
 							<span class="inline-flex h-4 w-4 items-center">
-								{@html tech.icon}
+								{tech.icon}
 							</span>
 						{:else}
 							<span class="text-base">{tech.icon}</span>
@@ -221,7 +257,7 @@
 				Backend
 			</h3>
 			<div class="flex flex-wrap gap-2">
-				{#each technologies.backend as tech}
+				{#each technologies.backend as tech, i (tech.id||i)}
 					<div
 						class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm shadow transition hover:bg-white/20"
 						style="color: {tech.color}"
@@ -230,7 +266,7 @@
 							<img src={tech.icon.replace('..', '')} alt={tech.name} class="h-4 w-4" />
 						{:else if tech.icon.startsWith('<svg')}
 							<span class="inline-flex h-4 w-4 items-center">
-								{@html tech.icon}
+								{tech.icon}
 							</span>
 						{:else}
 							<span class="text-base">{tech.icon}</span>
@@ -250,16 +286,16 @@
 				UI/UX Design
 			</h3>
 			<div class="flex flex-wrap gap-2">
-				{#each technologies.uidesign as tech}
+				{#each technologies.uidesign as tech, i (tech.id||i)}
 					<div
 						class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm shadow transition hover:bg-white/20"
 						style="color: {tech.color}"
 					>
 						{#if tech.icon.startsWith('http') || tech.icon.startsWith('..')}
 							<img src={tech.icon.replace('..', '')} alt={tech.name} class="h-4 w-4" />
-						{:else if tech.icon.startsWith('<svg')}
+						{:else if tech.icon.startsWith('<svg>')}
 							<span class="inline-flex h-4 w-4 items-center">
-								{@html tech.icon}
+								{tech.icon}
 							</span>
 						{:else}
 							<span class="text-base">{tech.icon}</span>
@@ -279,7 +315,7 @@
 				Tools
 			</h3>
 			<div class="flex flex-wrap gap-2">
-				{#each technologies.tools as tech}
+				{#each technologies.tools as tech, i (tech.id || i)}
 					<div
 						class="flex items-center gap-2 rounded-full bg-white/10 px-3 py-1.5 text-sm shadow transition hover:bg-white/20"
 						style="color: {tech.color}"
@@ -288,7 +324,7 @@
 							<img src={tech.icon.replace('..', '')} alt={tech.name} class="h-4 w-4" />
 						{:else if tech.icon.startsWith('<svg')}
 							<span class="inline-flex h-4 w-4 items-center">
-								{@html tech.icon}
+								{tech.icon}
 							</span>
 						{:else}
 							<span class="text-base">{tech.icon}</span>
@@ -303,19 +339,19 @@
 
 <!-- TIMELINE SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-lg backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="md:mx-5 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
 	<h2 class="mb-8 text-3xl font-bold text-white">🏄‍♂️ My Journey</h2>
 
 	<!-- Tab Navigation -->
-	<div class="mb-9 flex gap-4 border-b border-white/10 mt-2">
+	<div class="mb-9 flex md:overflow-hidden overflow-scroll gap-4 border-b border-white/10 sm:flex-nowrap mt-2">
 		<button
-			class="px-4 py-4 font-semibold transition-all"
+			class="px-4 py-4 font-semibold"
 			class:text-blue-400={activeTab === 'work'}
 			class:text-gray-400={activeTab !== 'work'}
-			class:border-b-2={activeTab === 'work'}
+			class:border-b-2 ={activeTab === 'work'}
 			class:border-blue-400={activeTab === 'work'}
 			on:click={() => (activeTab = 'work')}
 		>
@@ -323,10 +359,10 @@
 			Work Experience
 		</button>
 		<button
-			class="px-4 py-4 font-semibold transition-all"
+			class="px-4 py-4 font-semibold"
 			class:text-blue-400={activeTab === 'education'}
 			class:text-gray-400={activeTab !== 'education'}
-			class:border-b-2={activeTab === 'education'}
+			class:border-b-2 ={activeTab === 'education'}
 			class:border-blue-400={activeTab === 'education'}
 			on:click={() => (activeTab = 'education')}
 		>
@@ -334,10 +370,21 @@
 			Education
 		</button>
 		<button
-			class="px-4 py-4 font-semibold transition-all"
+			class="px-4 py-4 font-semibold"
+			class:text-blue-400={activeTab === 'organization'}
+			class:text-gray-400={activeTab !== 'organization'}
+			class:border-b-2 ={activeTab === 'organization'}
+			class:border-blue-400={activeTab === 'organization'}
+			on:click={() => (activeTab = 'organization')}
+		>
+			<i class="fa-solid fa-user-group mr-2"></i>
+			Organization
+		</button>
+		<button
+			class="px-4 py-4 font-semibold"
 			class:text-blue-400={activeTab === 'achievements'}
 			class:text-gray-400={activeTab !== 'achievements'}
-			class:border-b-2={activeTab === 'achievements'}
+			class:border-b-2 ={activeTab === 'achievements'}
 			class:border-blue-400={activeTab === 'achievements'}
 			on:click={() => (activeTab = 'achievements')}
 		>
@@ -351,17 +398,17 @@
 		<!-- Work Experience -->
 		{#if activeTab === 'work'}
 			<div class="relative space-y-8">
-				{#each filteredExperiences as exp, i}
+				{#each filteredExperiences as exp, i (exp.id || i)}
 					{@const colors = getColorClasses(exp.color)}
-					<div class="relative flex gap-6 pl-10">
+					<div class="relative flex gap-6 pl-0 md:pl-10">
 						<!-- Timeline Line -->
 						{#if i !== filteredExperiences.length - 1}
-							<div class="absolute top-10 left-3.75 h-full w-0.5 bg-white/20"></div>
+							<div class="hidden md:block absolute top-10 left-3.75 h-full w-0.5 bg-white/20"></div>
 						{/if}
 
 						<!-- Timeline Dot -->
 						<div
-							class="absolute top-2 left-0 h-8 w-8 rounded-full {colors.bg} {colors.border} flex items-center justify-center border-2"
+							class="hidden md:flex absolute top-2 left-0 h-8 w-8 rounded-full {colors.bg} {colors.border} items-center justify-center border-2"
 						>
 							<div class="h-3 w-3 rounded-full {colors.bg}"></div>
 						</div>
@@ -392,17 +439,17 @@
 		<!-- Education -->
 		{#if activeTab === 'education'}
 			<div class="relative space-y-8">
-				{#each education as edu, i}
+				{#each education as edu, i (edu.id || i)}
 					{@const colors = getColorClasses(edu.color)}
-					<div class="relative flex gap-6 pl-10">
+					<div class="relative flex gap-6 pl-0 md:pl-10">
 						<!-- Timeline Line -->
 						{#if i !== education.length - 1}
-							<div class="absolute top-10 left-3.75 h-full w-0.5 bg-white/20"></div>
+							<div class="hidden md:block absolute top-10 left-3.75 h-full w-0.5 bg-white/20"></div>
 						{/if}
 
 						<!-- Timeline Dot -->
 						<div
-							class="absolute top-2 left-0 h-8 w-8 rounded-full {colors.bg} {colors.border} flex items-center justify-center border-2"
+							class="hidden md:flex absolute top-2 left-0 h-8 w-8 rounded-full {colors.bg} {colors.border} items-center justify-center border-2"
 						>
 							<div class="h-3 w-3 rounded-full {colors.bg}"></div>
 						</div>
@@ -430,10 +477,49 @@
 			</div>
 		{/if}
 
+		<!-- Organization -->
+		{#if activeTab === 'organization'}
+			<div class="relative space-y-8">
+				{#each organizations as org, i (org.id || i)}
+					{@const colors = getColorClasses(org.color)}
+					<div class="relative flex gap-6 pl-0 md:pl-10">
+						<!-- Timeline Line -->
+						{#if i !== organizations.length - 1}
+							<div class="hidden md:block absolute top-10 left-3.75 h-full w-0.5 bg-white/20"></div>
+						{/if}
+
+						<!-- Timeline Dot -->
+						<div
+							class="hidden md:flex absolute top-2 left-0 h-8 w-8 rounded-full {colors.bg} {colors.border} items-center justify-center border-2"
+						>
+							<div class="h-3 w-3 rounded-full {colors.bg}"></div>
+						</div>
+
+						<!-- Content Card -->
+						<div
+							class="flex-1 rounded-lg border border-white/10 bg-white/5 p-6 transition-all hover:border-white/20 hover:bg-white/10"
+						>
+							<div class="mb-2 flex flex-col items-start justify-between md:flex-row md:items-center">
+								<div>
+									<h3 class="text-xl font-bold {colors.text}">{org.position}</h3>
+									<p class="text-lg text-white">{org['organization-name']}</p>
+								</div>
+								<span class="rounded-full bg-white/10 px-3 py-1 mt-4 text-sm text-gray-300"
+									>{org.period}</span
+								>
+							</div>
+							<p class="mt-3 text-gray-300">{org.description}</p>
+						</div>
+					</div>
+				{/each}
+			</div>
+		{/if}
+
+
 		<!-- Achievements -->
 		{#if activeTab === 'achievements'}
 			<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-				{#each achievements as achievement}
+				{#each achievements as achievement, i (achievement.id || i)}
 					{@const colors = getColorClasses(achievement.color)}
 					<div
 						class="rounded-lg border border-white/10 bg-white/5 p-6 transition-all hover:border-white/20 hover:bg-white/10"
@@ -458,22 +544,28 @@
 
 <!-- FEATURED PROJECTS -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-md backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="md:mx-5 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-md transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 	id="projects"
 >
-	<div class="mb-8 flex items-center justify-between">
+	<div class="mb-8 flex flex-wrap items-center justify-between">
 		<div class="flex">
 			<i class="fa-solid fa-star mr-3 text-2xl text-yellow-400"></i>
 			<h2 class="text-2xl font-semibold">Highlighted Works</h2>
 		</div>
 
-		<a href="/projects" class="rounded-md bg-blue-950/70 px-7 py-3">See Another Works</a>
+		<a 
+			href="/projects"
+			target="_blank"
+			rel="external noopener noreferrer"
+			class="mt-5 rounded-md bg-blue-950/70 px-7 py-3 hover:bg-cyan-400/50 transition duration-150">
+			See Another Works
+		</a>
 	</div>
 
-	<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
-		{#each selectedProjects as project}
+	<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+		{#each selectedProjects as project, i (project.id || i)}
 			<div class="rounded-lg bg-white/10 shadow-lg transition hover:bg-white/15">
 				<img
 					src={project.image}
@@ -492,6 +584,7 @@
 					<a
 						href={project.link}
 						target="_blank"
+						rel="external noopener noreferrer"
 						class="inline-block rounded bg-blue-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-blue-700"
 					>
 						View Project →
@@ -504,7 +597,7 @@
 
 <!-- CONTACT SECTION -->
 <div
-	class="mt-3 rounded-md bg-white/5 p-10 shadow-md backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+	class="md:mx-5 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-md transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 	id="contact">
@@ -514,10 +607,10 @@
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-2">
 		<!-- Contact Info -->
 		<div
-			class="flex justify-center rounded-md bg-white/5 p-10 shadow-md backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+			class="flex justify-center rounded-xl border border-white/10 bg-slate-800/60 p-10 shadow-md"
 		>
 			<div
-				class="flex h-10 w-10 mr-4 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-blue-900/70 backdrop-blur-sm sm:h-12 sm:w-12"
+				class="flex h-10 w-10 mr-4 shrink-0 items-center justify-center rounded-full border border-blue-400/30 bg-blue-900 sm:h-12 sm:w-12"
 			>
 				<i class="fa-regular fa-envelope text-lg text-blue-400 sm:text-xl"></i>
 			</div>
@@ -535,10 +628,10 @@
 
 		<!-- Contact Info -->
 		<div
-			class="flex justify-center rounded-md bg-white/5 p-10 shadow-md backdrop-blur-xs transition-opacity duration-1000 ease-in-out"
+			class="flex justify-center rounded-xl border border-white/10 bg-slate-800/60 p-10 shadow-md"
 		>
 			<div
-				class="flex h-10 w-10 mr-4  shrink-0 items-center justify-center rounded-full border border-purple-400/30 bg-purple-900/70 backdrop-blur-sm sm:h-12 sm:w-12"
+				class="flex h-10 w-10 mr-4 shrink-0 items-center justify-center rounded-full border border-purple-400/30 bg-purple-900 sm:h-12 sm:w-12"
 			>
 				<i class="fa-solid fa-share-nodes text-lg text-purple-400 sm:text-xl"></i>
 			</div>
