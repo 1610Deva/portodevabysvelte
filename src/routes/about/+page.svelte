@@ -125,45 +125,45 @@
 
 <!-- INTRODUCTION SECTION -->
 <div
-	class="md:mx-5 mt-3 grid grid-cols-1 gap-6 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:grid-cols-2"
+	class="order-2 md:order-1 md:mx-5 mt-3 grid grid-cols-1 gap-6 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:grid-cols-2"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
-	<!-- About Text -->
-	<div class="flex flex-col justify-center p-4">
-		<!-- <h5 class="inline-block mb-5 text-base font-semibold text-white md:text-lg">
-			<span class="text-amber-100 bg-blue-900 px-10 py-2">ABOUT ME</span>
-		</h5> -->
-		<h2 class="mb-7 text-3xl font-bold text-white">
-			<span class="px-15 py-3 bg-blue-900 rounded-lg">🧑‍💻 Get To Know Me!</span>
-		</h2>
-		<p class="mb-4 text-lg leading-relaxed text-gray-300">
-			Hi! I'm <span class="font-semibold text-white">I Made Nandana Devadatta Giri</span>, a
-			passionate <span class="border-b-4 border-blue-500">Frontend Developer</span> and <span class="border-b-4 border-blue-500">UI/UX Designer</span> based in Surabaya,
-			Indonesia. I specialize in creating beautiful, functional, and user-friendly web experiences.
-		</p>
-		<p class="mb-4 text-lg leading-relaxed text-gray-300">
-			I am interested in programming and design, especially website development, application design,
-			and digital marketing. I have been interested in these fields for more than three years and
-			continuously learning new technologies to improve my skills.
-		</p>
-		<p class="mb-6 text-lg leading-relaxed text-gray-300">
-			Currently, I'm pursuing my Bachelor's degree in Informatics Engineering at State University of
-			Surabaya with a GPA of 3.89/4.00, where I'm also serving as a Software Development Laboratory
-			Assistant.
-		</p>
-	</div>
-
 	<!-- Profile Image -->
-	<div class="flex items-center justify-center">
+	<div class="flex items-center justify-center order-1 md:order-2">
 		<div class="overflow-hidden rounded-lg border-4 border-blue-400/30 shadow-xl">
 			<img
-				src="../assets/img/test1.jpg"
+				src="../assets/img/deva2.jpeg"
 				alt="Devadatta Giri"
 				class="h-auto w-full max-w-md object-cover transition-transform duration-300 hover:scale-105"
 				loading="lazy"
 			/>
 		</div>
+	</div>
+
+	<!-- About Text -->
+	<div class="flex flex-col justify-center p-4 order-2 md:order-1">
+		<!-- <h5 class="inline-block mb-5 text-base font-semibold text-white md:text-lg">
+			<span class="text-amber-100 bg-blue-900 px-10 py-2">ABOUT ME</span>
+		</h5> -->
+		<h2 class="mb-7 text-md md:text-3xl font-bold text-white">
+			<span class="px-15 py-3 bg-blue-900 rounded-lg">🧑‍💻 Get To Know Me!</span>
+		</h2>
+		<p class="mb-4 text-lg leading-relaxed text-gray-300 text-justify">
+			Hi! I'm <span class="font-semibold text-white">I Made Nandana Devadatta Giri</span>, a
+			passionate <span class="border-b-4 border-blue-500">Frontend Developer</span> and <span class="border-b-4 border-blue-500">UI/UX Designer</span> based in Surabaya,
+			Indonesia. I specialize in creating beautiful, functional, and user-friendly web experiences.
+		</p>
+		<p class="mb-4 text-lg leading-relaxed text-gray-300 text-justify">
+			I am interested in programming and design, especially website development, application design,
+			and digital marketing. I have been interested in these fields for more than three years and
+			continuously learning new technologies to improve my skills.
+		</p>
+		<p class="mb-6 text-lg leading-relaxed text-gray-300 text-justify">
+			Currently, I'm pursuing my Bachelor's degree in Informatics Engineering at State University of
+			Surabaya with a GPA of 3.89/4.00, where I'm also serving as a Software Development Laboratory
+			Assistant.
+		</p>
 	</div>
 </div>
 
@@ -173,7 +173,7 @@
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
-	<h2 class="mb-8 text-3xl font-bold text-white">
+	<h2 class="mb-8 text-xl md:text-3xl font-bold text-white">
 		<span class="px-15 py-3 bg-blue-900 shadow-lg rounded-lg ">📝 What I'm Doing</span>
 	</h2>
 
@@ -228,14 +228,14 @@
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
-	<h2 class="mb-8 text-3xl font-bold text-white">
+	<h2 class="mb-8 text-xl md:text-3xl font-bold text-white">
 		<span class="px-15 py-3 bg-blue-900 rounded-lg">🏄‍♂️ My Journey</span>
 	</h2>
 
 	<!-- Tab Navigation -->
-	<div class="mb-8 flex flex-wrap gap-4">
+	<div class="mb-8 flex md:overflow-hidden overflow-scroll gap-4">
 		<button
-			class="rounded-lg px-6 py-3 font-semibold transition-all"
+			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'work'}
 			class:text-white={activeTab === 'work'}
 			class:bg-white={activeTab !== 'work'}
@@ -247,7 +247,7 @@
 			Work Experience
 		</button>
 		<button
-			class="rounded-lg px-6 py-3 font-semibold transition-all"
+			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'education'}
 			class:text-white={activeTab === 'education'}
 			class:bg-white={activeTab !== 'education'}
@@ -259,7 +259,7 @@
 			Education
 		</button>
 		<button
-			class="rounded-lg px-6 py-3 font-semibold transition-all"
+			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'organization'}
 			class:text-white={activeTab === 'organization'}
 			class:bg-white={activeTab !== 'organization'}
@@ -271,7 +271,7 @@
 			Organization
 		</button>
 		<button
-			class="rounded-lg px-6 py-3 font-semibold transition-all"
+			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'achievements'}
 			class:text-white={activeTab === 'achievements'}
 			class:bg-white={activeTab !== 'achievements'}
