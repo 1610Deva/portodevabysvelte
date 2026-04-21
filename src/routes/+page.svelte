@@ -3,7 +3,7 @@
 
 	let isVisible = false;
 
-	const specialities = ['Frontend Developer 🌐', 'UI/UX Designer ✒️', 'Web Designer 🧩'];
+	const specialities = ['Frontend Developer 🌐', 'UI/UX Designer ✒️'];
 
 	const greetings = [
 		'Hello',
@@ -174,7 +174,7 @@
 		</div>
 
 		<!-- Speciality Badges -->
-		<div class="lex-wrap gap-2 hidden md:flex">
+		<div class="flex flex-wrap gap-2">
 			{#each specialities as s}
 				<span class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white hover:bg-white hover:text-gray-700 hover:transition duration-300 ease-in-out cursor-pointer">
 					{s}
