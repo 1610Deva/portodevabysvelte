@@ -146,8 +146,8 @@
 		<!-- <h5 class="inline-block mb-5 text-base font-semibold text-white md:text-lg">
 			<span class="text-amber-100 bg-blue-900 px-10 py-2">ABOUT ME</span>
 		</h5> -->
-		<h2 class="mb-7 text-md md:text-3xl font-bold text-white">
-			<span class="px-15 py-3 bg-blue-900 rounded-lg">🧑‍💻 Get To Know Me!</span>
+		<h2 class="mb-7 text-xl md:text-3xl font-bold text-white">
+			<span class="px-10 md:px-15 py-3 bg-blue-900 rounded-lg">🧑‍💻 Get To Know Me!</span>
 		</h2>
 		<p class="mb-4 text-lg leading-relaxed text-gray-300 text-justify">
 			Hi! I'm <span class="font-semibold text-white">I Made Nandana Devadatta Giri</span>, a
