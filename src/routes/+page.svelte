@@ -170,6 +170,7 @@
 		<div class="mb-6">  
 			<h1 class="my-4 text-4xl font-bold text-gray-300 md:text-5xl">{displayedGreetings}👋</h1>
 			<h1 class="my-4 text-6xl font-black text-white md:text-6xl lg:text-7xl">I'm <span class="text-cyan-500 sm:border-b-0 lg:border-b-8 border-blue-400">Devadatta Giri</span></h1>
+			<div class="w-[220px] h-3 bg-cyan-500 md:hidden"></div>
 			<h5 class="mt-10 text-lg text-gray-400 font-medium">– SURABAYA,ID </h5>
 		</div>
 
