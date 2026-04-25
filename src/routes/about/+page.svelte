@@ -125,13 +125,13 @@
 
 <!-- INTRODUCTION SECTION -->
 <div
-	class="order-2 md:order-1 md:mx-5 mt-3 grid grid-cols-1 gap-6 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:grid-cols-2"
+	class="order-2 mt-3 grid grid-cols-1 gap-6 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:order-1 md:mx-5 md:grid-cols-2"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
 	<!-- Profile Image -->
-	<div class="flex items-center justify-center order-1 md:order-2">
-		<div class="overflow-hidden rounded-lg border-4 border-blue-400/30 shadow-xl">
+	<div class="order-1 flex items-center justify-center md:order-2">
+		<div class="z-0 overflow-hidden rounded-lg border-4 border-blue-400/30 shadow-xl">
 			<img
 				src="../assets/img/deva2.jpeg"
 				alt="Devadatta Giri"
@@ -142,24 +142,25 @@
 	</div>
 
 	<!-- About Text -->
-	<div class="flex flex-col justify-center p-4 order-2 md:order-1">
+	<div class="order-2 flex flex-col justify-center p-4 md:order-1">
 		<!-- <h5 class="inline-block mb-5 text-base font-semibold text-white md:text-lg">
 			<span class="text-amber-100 bg-blue-900 px-10 py-2">ABOUT ME</span>
 		</h5> -->
-		<h2 class="mb-7 text-xl md:text-3xl font-bold text-white">
-			<span class="px-10 md:px-15 py-3 bg-blue-900 rounded-lg">🧑‍💻 Get To Know Me!</span>
+		<h2 class="mb-7 text-xl font-bold text-white md:text-3xl">
+			<span class="rounded-lg bg-blue-900 px-10 py-3 md:px-15">🧑‍💻 Get To Know Me!</span>
 		</h2>
-		<p class="mb-4 text-lg leading-relaxed text-gray-300 text-justify">
+		<p class="mb-4 text-justify text-lg leading-relaxed text-gray-300">
 			Hi! I'm <span class="font-semibold text-white">I Made Nandana Devadatta Giri</span>, a
-			passionate <span class="border-b-4 border-blue-500">Frontend Developer</span> and <span class="border-b-4 border-blue-500">UI/UX Designer</span> based in Surabaya,
-			Indonesia. I specialize in creating beautiful, functional, and user-friendly web experiences.
+			passionate <span class="border-b-4 border-blue-500">Frontend Developer</span> and
+			<span class="border-b-4 border-blue-500">UI/UX Designer</span> based in Surabaya, Indonesia. I specialize
+			in creating beautiful, functional, and user-friendly web experiences.
 		</p>
-		<p class="mb-4 text-lg leading-relaxed text-gray-300 text-justify">
+		<p class="mb-4 text-justify text-lg leading-relaxed text-gray-300">
 			I am interested in programming and design, especially website development, application design,
 			and digital marketing. I have been interested in these fields for more than three years and
 			continuously learning new technologies to improve my skills.
 		</p>
-		<p class="mb-6 text-lg leading-relaxed text-gray-300 text-justify">
+		<p class="mb-6 text-justify text-lg leading-relaxed text-gray-300">
 			Currently, I'm pursuing my Bachelor's degree in Informatics Engineering at State University of
 			Surabaya with a GPA of 3.89/4.00, where I'm also serving as a Software Development Laboratory
 			Assistant.
@@ -169,12 +170,12 @@
 
 <!-- WHAT I DO SECTION -->
 <div
-	class="md:mx-5 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:mx-5"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
-	<h2 class="mb-8 text-xl md:text-3xl font-bold text-white">
-		<span class="px-15 py-3 bg-blue-900 shadow-lg rounded-lg ">📝 What I'm Doing</span>
+	<h2 class="mb-8 text-xl font-bold text-white md:text-3xl">
+		<span class="rounded-lg bg-blue-900 px-15 py-3 shadow-lg">📝 What I'm Doing</span>
 	</h2>
 
 	<div class="grid grid-cols-1 gap-6 md:grid-cols-3">
@@ -224,18 +225,18 @@
 
 <!-- TIMELINE SECTION -->
 <div
-	class="md:mx-5 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:mx-5"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
-	<h2 class="mb-8 text-xl md:text-3xl font-bold text-white">
-		<span class="px-15 py-3 bg-blue-900 rounded-lg">🏄‍♂️ My Journey</span>
+	<h2 class="mb-8 text-xl font-bold text-white md:text-3xl">
+		<span class="rounded-lg bg-blue-900 px-15 py-3">🏄‍♂️ My Journey</span>
 	</h2>
 
 	<!-- Tab Navigation -->
-	<div class="mb-8 flex md:overflow-hidden overflow-scroll gap-4">
+	<div class="mb-8 flex gap-4 overflow-scroll md:overflow-hidden">
 		<button
-			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
+			class="md:text-md rounded-lg px-6 py-3 text-sm font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'work'}
 			class:text-white={activeTab === 'work'}
 			class:bg-white={activeTab !== 'work'}
@@ -247,7 +248,7 @@
 			Work Experience
 		</button>
 		<button
-			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
+			class="md:text-md rounded-lg px-6 py-3 text-sm font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'education'}
 			class:text-white={activeTab === 'education'}
 			class:bg-white={activeTab !== 'education'}
@@ -259,7 +260,7 @@
 			Education
 		</button>
 		<button
-			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
+			class="md:text-md rounded-lg px-6 py-3 text-sm font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'organization'}
 			class:text-white={activeTab === 'organization'}
 			class:bg-white={activeTab !== 'organization'}
@@ -271,7 +272,7 @@
 			Organization
 		</button>
 		<button
-			class="text-sm md:text-md rounded-lg px-6 py-3 font-semibold transition-all"
+			class="md:text-md rounded-lg px-6 py-3 text-sm font-semibold transition-all"
 			class:bg-blue-600={activeTab === 'achievements'}
 			class:text-white={activeTab === 'achievements'}
 			class:bg-white={activeTab !== 'achievements'}
@@ -279,7 +280,7 @@
 			class:hover:bg-white={activeTab !== 'achievements'}
 			on:click={() => (activeTab = 'achievements')}
 		>
-			<i class="fa-solid fa-trophy mr-2"></i>
+			<i class="fa-solid fa-trophy mr-2 text-xl"></i>
 			Achievements
 		</button>
 	</div>
@@ -420,7 +421,7 @@
 
 <!-- CONTACT CTA -->
 <div
-	class="md:mx-5 mt-3 rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-950/60 to-purple-950/60 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
+	class="mt-3 rounded-xl border border-blue-500/20 bg-gradient-to-r from-blue-950/60 to-purple-950/60 p-10 shadow-lg transition-opacity duration-1000 ease-in-out md:mx-5"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >

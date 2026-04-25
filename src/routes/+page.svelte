@@ -169,7 +169,7 @@
 
 		<div class="mb-6">  
 			<h1 class="my-4 text-4xl font-bold text-gray-300 md:text-5xl">{displayedGreetings}👋</h1>
-			<h1 class="my-4 text-6xl font-black text-white md:text-6xl lg:text-7xl">I'm <span class="text-cyan-500 sm:border-b-0 lg:border-b-8 border-blue-400">Devadatta Giri</span></h1>
+			<h1 class="my-4 text-4xl font-black text-white md:text-6xl lg:text-7xl">I'm <span class="text-cyan-500 sm:border-b-0 lg:border-b-8 border-blue-400">Devadatta Giri</span></h1>
 			<div class="w-[220px] h-3 bg-cyan-500 md:hidden"></div>
 			<h5 class="mt-10 text-lg text-gray-400 font-medium">– SURABAYA,ID </h5>
 		</div>
@@ -177,7 +177,7 @@
 		<!-- Speciality Badges -->
 		<div class="flex flex-wrap gap-2">
 			{#each specialities as s}
-				<span class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-sm font-medium text-white hover:bg-white hover:text-gray-700 hover:transition duration-300 ease-in-out cursor-pointer">
+				<span class="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 sm:text-sm  md:text-lg font-medium text-white hover:bg-white hover:text-gray-700 hover:transition duration-300 ease-in-out cursor-pointer">
 					{s}
 				</span>
 			{/each}
@@ -189,8 +189,7 @@
 		</p>
 		<div class="flex gap-3">
 			<a
-				href='/assets/cv/CV-Devadatta-Giri.pdf'
-				download="CV-Devadatta-Giri.pdf"
+				href='https://drive.google.com/file/d/1SHNuFOD89MfcjSE5RAxJf5G-b2eSeGaN/view?usp=drive_link'
 				aria-label="Download CV"
 				target="_blank"
 				class="rounded bg-sky-900 px-4 py-2 text-white transition hover:bg-blue-800"
@@ -527,7 +526,8 @@
 					>
 						<div class="mb-4 flex items-start gap-4">
 							<div class="flex h-12 w-12 items-center justify-center rounded-full {colors.bg}">
-								<i class="{achievement.icon} text-2xl {colors.text}"></i>
+								<i class="fa-solid fa-trophy text-xl {colors.text}"></i>
+								<!-- <i class="{achievement.icon} text-2xl {colors.text}"></i> -->
 							</div>
 							<div class="flex-1">
 								<h3 class="text-lg font-bold text-white">{achievement.title}</h3>
