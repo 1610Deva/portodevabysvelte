@@ -27,7 +27,7 @@
 
 <!-- Header Section -->
 <div
-	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
+	class="md:mx-5 mb-3 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -40,7 +40,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 <!-- Contact Information Section -->
 <div
-	class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
+	class="md:mx-5 mb-3 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-10 shadow-lg transition-opacity duration-1000 ease-in-out"
 	class:opacity-0={!isVisible}
 	class:opacity-100={isVisible}
 >
@@ -144,7 +144,7 @@ I'm always open to discussing new projects, creative ideas, or opportunities to 
 
 <!-- BACK TO HOME -->
 <div
-    class="mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-6 text-center shadow-lg transition-opacity duration-1000 ease-in-out"
+    class="md:mx-5 mb-3 mt-3 rounded-xl border border-white/10 bg-slate-900/80 p-6 text-center shadow-lg transition-opacity duration-1000 ease-in-out"
     class:opacity-0={!isVisible}
     class:opacity-100={isVisible}
 >           
